@@ -22,8 +22,8 @@ import {
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 import LogoImage from "../assets/logo.png";
 import { ThemeContext } from "../theme";
 
@@ -66,24 +66,20 @@ const CustomDrawer = () => {
         },
       }}
     >
-      <Box sx={{ p: 2, display: "flex", flexDirection: "column", gap: 1 }}>
+      <Box sx={{ p: 1, display: "flex", flexDirection: "column", gap: 1 }}>
         <Box
           sx={{
             display: "flex",
             justifyContent: "center",
-            padding: "5px",
+            padding: "3px",
             backgroundColor: "#fff",
           }}
         >
-          <img
-            src={LogoImage}
-            alt="Logo"
-            style={{ width: 150 }}
-          />
+          <img src={LogoImage} alt="Logo" style={{ width: 150 }} />
         </Box>
         <Select defaultValue="Project Name">
           <MenuItem value="Project Name">
-            Project Name <br /> Business Name
+             <Typography><span style={{fontSize:"20px", fontWeight:"500"}}>Business Name</span> <br /> Project Name</Typography>
           </MenuItem>
         </Select>
       </Box>
@@ -156,8 +152,16 @@ const CustomDrawer = () => {
                 placement="right-end"
                 style={{ zIndex: 1201 }}
               >
-                <Paper sx={{ mt: 1, p:2 }}>
-                  <Box sx={{ p: 3, display:"flex", justifyContent:"center", alignItems:"center", gap:"3px" }}>
+                <Paper sx={{ mt: 1, p: 2 }}>
+                  <Box
+                    sx={{
+                      p: 3,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "3px",
+                    }}
+                  >
                     <LightModeIcon />
                     <FormControlLabel
                       control={
